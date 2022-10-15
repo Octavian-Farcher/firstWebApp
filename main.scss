@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:ital@0;1&display=swap');
+:root {
+  --primary-color: #007af3;
+}
+body {
+  background: #f2f2f2;
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+.navbar {
+  background: white;
+  padding: 1em;
+  .logo {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 1.2em;
+    span {
+      color: var(--primary-color);
+    }
+  }
+  nav {
+    display: none;
+  }
+  .container {
+    display: flex;
+    place-content: space-between;
+  }
+  .mobile-menu {
+    cursor: pointer;
+  }
+}
+a {
+  color: #1b1b1b;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+section {
+  padding: 5em 2em;
+}
+.hero {
+  text-align: center;
+}
+.left-col {
+  .subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+    letter-spacing: 0.3em;
+  }
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: 0.2em;
+  }
+  .primary-cta {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.6em 1.3em;
+    font-size: 1.4em;
+    border-radius: 8em;
+    font-weight: bold;
+    display: inline-block;
+  }
+  .watch-video-cta {
+    display: block;
+    font-size: 1.4em;
+    margin-top: 1em;
+    text-decoration: none;
+    img {
+      margin-right: 0.5em;
+    }
+  }
+}
+.hero-img {
+  width: 75%;
+  margin-top: 3em;
+}
+.features-section {
+  background: #20272e;
+  color: white;
+}
+ul.features-list {
+  margin: 0;
+  padding-left: 0.1em;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(19rem, 1fr)
+  ); //in functie de spatiul de care dispune va face mai multe coloane cu mai putine elemente
+
+  li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    position: relative;
+
+    &:before {
+      content: '';
+      left: -2em;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url(/images/dholler-ok.svg);
+      margin-right: 0.5em;
+    }
+  }
+}
+.features-section img {
+  display: none;
+}
+.testimonials-section {
+  background: var(--primary-color);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  li {
+    background: #006bd6;
+    text-align: center;
+    padding: 2em 1em;
+    width: 80%;
+    margin: 0 auto 5em auto;
+    border-radius: 1em;
+
+    img {
+      width: 5em;
+      height: 5em;
+      border: 5px solid #006bd6;
+      border-radius: 50%;
+      margin-top: -4.5em;
+    }
+  }
+}
+
+h2 {
+  font-size: 2em;
+}
+label {
+  display: block; // prin asta, fiecare element se afiseaza pe urmatorul rand
+  margin-bottom: 0.5em;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid rgb(116, 104, 104);
+  box-sizing: border-box;
+}
+input[type='submit'] {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  padding: 0.8em 2em;
+  width: unset;
+  cursor: pointer;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+}
+nav.menu-btn {
+  display: block;
+}
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272e;
+  height: 100vh;
+  padding: 1em;
+
+  ul.primary-nav {
+    margin-top: 5em;
+  }
+  li {
+    a {
+      font-weight: normal;
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.5em;
+      font-size: 1.3em;
+      text-align: right;
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+.mobile-menu-exit {
+  float: right;
+  background: white;
+  margin: 0.5em;
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  // orice dimensiune mai mare sau egala cu 768px va executa ce e in acolade
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  } // prin ultimele acolade facem ca meniul hamburger si casuta de inchidere sa dispara la dimensiuni >768
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto; // ocupa 180px in inlatime si auto in latime
+    justify-content: unset;
+  } // intre acolade am hotarat cum se afiseaza logo-ul
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    ul {
+      display: flex;
+    }
+    a {
+      color: black;
+      font-size: 1em;
+      padding: 0.1em 1em;
+    } // Intre acolade am executat cum se afiseaza navbar-ul fara Logo
+    ul.primary-nav {
+      // aici editam clasa din interiorul listei cu denumirea primary-nav
+      margin: 0;
+    }
+    li.current a {
+      font-weight: bold;
+    } // am editat font-ul butonului home
+    li.go-premium-cta a {
+      color: var(--primary-color); // culoarea de fundal albastra
+      border: 3px solid var(--primary-color); // culoarea casutei blue
+      font-weight: bold; // fontul bold
+      border-radius: 5em; // rotunjim colturile
+      margin-top: -0.2em; //il mutam mai jos
+
+      &:hover {
+        background: var(--primary-color);
+        color: white;
+      } // aici am editat ca atunci cand trecem cu mouse-ul pe deasupra "Go Premium" sa se faca fundalul albastru si culoarea textului alba
+    }
+  }
+}
+@media only screen and (min-width: 1080px) {
+  // introducem regula in cazul in care ecranul are minim 1080px
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    .left-col {
+      margin: 3em 3em 0em 5em;
+      h1 {
+        font-size: 3em;
+        width: 90%;
+      }
+    }
+  }
+  .hero-img {
+    width: 30%;
+    margin-right: 8em;
+    margin-bottom: 10em;
+    margin-top: -3em;
+  }
+  .hero-cta {
+    display: flex;
+    .primary-cta {
+      margin-right: 1em;
+      &:hover {
+        border: solid;
+        border-color: var(--primary-color);
+        background-color: white;
+        color: var(--primary-color);
+      }
+    }
+    .watch-video-cta {
+      &:hover {
+        border: solid;
+        border-radius: 1.6em;
+        background-color: #f2f2f2;
+        color: var(--primary-color);
+        padding-bottom: 10px;
+        margin-right: 20px;
+      }
+    }
+    ul.features-list {
+      display: block;
+      margin-left: 5em;
+      li {
+        font-size: 1.4em;
+        &:before {
+          // este o
+          width: 30px;
+          height: 30px;
+        } // prin asta am modificat marimea check mark-ului verde
+      }
+    }
+  }
+  .features-section {
+    position: relative; // il pune la o distanta definita fata de directia pe care o dai (right: 20xp)
+  }
+  .features-section img {
+    display: block;
+    position: absolute; //se muta in functie de pozitia elementelor din interiorul parent-ului (features-section)
+    right: 10px; // o mut cu 10 px spre stanga fata de marginea din dreapta a browserului
+    width: 350px; // ii modific latimea
+    bottom: -10em; //ii scad din distanta fata de marginea parintelui
+  }
+  .testimonials-section ul {
+    //orice ul din testimnonials-list
+    display: flex;
+    li {
+      margin: 0 1em;
+    }
+  }
+  .contact-section {
+    position: relative;
+
+    .container {
+      display: flex;
+    }
+  }
+
+  .contact-right {
+    //contact right este partea din dreapta datelor pentru contact
+    position: absolute; // elementul se pozitioneaza relativ fata de elementul caruia ii este subordonat
+    right: 0; //spatiu spre dreapta 0
+    top: 0; // spatiu spre stanga 0
+    width: 45%; // latime 45 la suta
+    height: 100%; //latime 100 din sectiunea in care se afla
+
+    iframe {
+      height: 100%; // link-ul google maps situat pe 100% din inaltimea sectiunii .contact-right
+      width: 100%; // link-ul google maps situat pe 100% din latimea sectiunii parinte
+    }
+  }
+}
+@media only screen and (min-width: 1450px) {
+  // se va afisa doar daca ecranul dispozitivului este 1450px minim
+  .features-section {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 10%;
+      height: 20em;
+      background: var(--primary-color);
+      left: 0;
+      top: -4em;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 20em;
+      background: url('https://assets.codepen.io/2621168/dots.svg') no-repeat;
+      left: 4.5em;
+      top: 2em;
+    }
+  }
+}

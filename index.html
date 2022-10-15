@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Crash Course/main.css" />
+    <title>Crash Course</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <a class="logo" href="#">Remember<span>That</span></a>
+        <img
+          id="mobile-cta"
+          class="mobile-menu"
+          src="/Crash Course/images/icons8-menu.svg"
+          alt="Open Navigation"
+        />
+
+        <nav>
+          <img
+            id="mobile-exit"
+            class="mobile-menu-exit"
+            src="/Crash Course/images/x-svgrepo-com.svg"
+            alt="Close Navigation"
+          />
+          <ul class="primary-nav">
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+          <ul class="secondary-nav">
+            <li><a href="#">Contact</a></li>
+            <li class="go-premium-cta"><a href="#">Go Premium</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="container">
+        <div class="left-col">
+          <p class="subhead">It's Farcas &amp; Octavian</p>
+          <h1>A Task App That Doesn't Stink</h1>
+          <div class="hero-cta">
+            <a href="#" class="primary-cta">Try for free</a>
+            <a href="#" class="watch-video-cta">
+              <img
+                src="/Crash Course/images/Movie_icon.svg"
+                alt="Watch a Video"
+                img
+                width="20"
+                px
+                img
+                height="20"
+                px
+              />Watch a Video
+            </a>
+          </div>
+        </div>
+        <img
+          src="/Crash Course/images/illustration.svg"
+          class="hero-img"
+          alt="Illustration"
+          img
+          width="300 px"
+          img
+          height="500 px"
+        />
+      </div>
+    </section>
+    <section class="features-section">
+      <div class="container">
+        <ul class="features-list">
+          <li>Unlimited Tasks</li>
+          <li>SMS Task Reminders</li>
+          <li>Confetti Explosion Upon Task Completion</li>
+          <li>Social Media Announcements</li>
+          <li>Real Time Collaboration</li>
+          <li>Other Awesome Features</li>
+        </ul>
+        <img
+          src="/Crash Course/images/holding-phone.jpg"
+          alt="Person Holding Phone"
+        />
+      </div>
+    </section>
+    <section class="testimonials-section">
+      <div class="container">
+        <ul>
+          <li>
+            <img
+              src="/Crash Course/images/farcas.jpeg"
+              alt="An image with Farcas Octavian"
+            />
+            <blockquote>
+              “The key is not the ‘will to win’… everybody has that. It is the
+              will to prepare to win that is important”
+            </blockquote>
+            <cite>Farcas Octavian</cite>
+          </li>
+          <li>
+            <img
+              src="/Crash Course/images/farcas.jpeg"
+              alt="An image with Farcas Octavian"
+            />
+            <blockquote>
+              “The key is not the ‘will to win’… everybody has that. It is the
+              will to prepare to win that is important”
+            </blockquote>
+            <cite>Farcas Octavian</cite>
+          </li>
+          <li>
+            <img
+              src="/Crash Course/images/farcas.jpeg"
+              alt="An image with Farcas Octavian"
+            />
+            <blockquote>
+              “The key is not the ‘will to win’… everybody has that. It is the
+              will to prepare to win that is important”
+            </blockquote>
+            <cite>Farcas Octavian</cite>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-left">
+          <h2>Contact</h2>
+          <form action="">
+            <label for="Name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" />
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Email"
+            />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message For Us"
+            ></textarea>
+            <input
+              type="submit"
+              class="send-message-cta"
+              value="Send Message"
+            />
+          </form>
+        </div>
+        <div class="contact-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11395.433708196884!2d26.024192095198053!3d44.436066194849964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b201b1229ab4ef%3A0x7864c6f6ad25bfa3!2sClinica%20Sf%C3%A2nta%20Maria%20Veteranilor!5e0!3m2!1sro!2sro!4v1642168506191!5m2!1sro!2sro"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <script>
+      const mobileBtn = document.getElementById('mobile-cta');
+      nav = document.querySelector('nav');
+      mobileBtnExit = document.getElementById('mobile-exit');
+      mobileBtn.addEventListener('click', () => {
+        nav.classList.add('menu-btn');
+      });
+      mobileBtnExit.addEventListener('click', () => {
+        nav.classList.remove('menu-btn');
+      });
+    </script>
+  </body>
+</html>
